@@ -33,24 +33,24 @@ void get_opt(FILE* stream, int argNum, char* const *argvalue)
             print_help(stdout, 0, argvalue[0]);
             break;
         case 'm':
-            charMax(stream);
+            printf("%d" ,charMax(stream));
             break;
         case 'w':
-            countWord(stream);
+            printf("%d", countWord(stream));
             break;
         case 'L':
-            maxCharLine(stream);
+            printf ("%d", maxCharLine(stream));
             break;
         case 'l':
-            countLine(stream);
+            printf("%d", countLine(stream));
             break;
         case '?':
             print_help(stderr, 1, argvalue[0]);
-        case '1':
-            break;
-        default:
-            abort();
-            break;
+        //case '1':
+            //break;
+        //default:
+            //abort();
+            //break;
         }
     } while (nextopt != -1);
     
